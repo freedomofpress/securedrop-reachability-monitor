@@ -85,6 +85,7 @@ class SDMonitor:
                     instance["intro_pts"] = hs_desc.introduction_points_content.decode()
                 except stem.DescriptorUnavailable:
                     instance["intro_pts"] = "descriptor unavailable"
+                    print(instance)
                     continue
                 pass
 
