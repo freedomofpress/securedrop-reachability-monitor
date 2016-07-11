@@ -131,4 +131,5 @@ if __name__ == "__main__":
         instances = sdmonitor.check_instances(instances)
 
     with open(join(logdir, results_file ), "w") as fh:
-        json.dump(instances, fh)
+        for instance in instances:
+            json.dump(instance, fh)
