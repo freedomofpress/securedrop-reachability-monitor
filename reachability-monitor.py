@@ -93,13 +93,11 @@ class SDMonitor:
             
             for circuit in self.controller.get_circuits():
                 if circuit.purpose == "HS_CLIENT_INTRO":
-                    intro_circs.append(dict(purpose=circuit.purpose,
-                                           path=circuit.path,
+                    intro_circs.append(dict(path=circuit.path,
                                            reason=circuit.reason,
                                            remote_reason=circuit.remote_reason))
                 if circuit.purpose == "HS_CLIENT_REND":
-                    rend_circs.append(dict(purpose=circuit.purpose,
-                                           path=circuit.path,
+                    rend_circs.append(dict(path=circuit.path,
                                            state=circuit.hs_state,
                                            reason=circuit.reason,
                                            remote_reason=circuit.remote_reason))
